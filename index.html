@@ -18,22 +18,29 @@
       background-color: #fafafa;
       width: 100%;
       height: 100%;
-			zoom: 100%;
+      zoom: 100%;
     }
 
     .box {
       margin: 0 auto;
       margin-bottom: 1em;
-
       width: 90%;
+    }
 
-      /* padding: 0.5em 0 0.5em 0; */
-      /* 
-					border-top: 1px solid #e0e0e0;
-					border-left: 1px solid #e0e0e0;
-					border-right: 1px solid #e0e0e0;
-					border-bottom: 3px solid #e0e0e0;
-					border-radius: 3px; */
+    .ul {
+      padding-left: 15%;
+      padding-right: 15%;
+      list-style-type: disc;
+    }
+
+    .ul-left {
+      padding-left: 15%;
+      list-style-type: disc;
+    }
+
+    .ul-right {
+      padding-right: 15%;
+      list-style-type: disc;
     }
 
     .scale-up-center {
@@ -74,7 +81,6 @@
         transform: scale(1);
       }
     }
-
   </style>
 
 </head>
@@ -106,7 +112,8 @@
 
             <div class="column level-item has-text-centered">
               <div>
-                <a href="https://www.google.com/maps/place/Lea+House,+37+Southwell+Park+Rd,+Camberley+GU15+3QG/@51.3351136,-0.7561252,17z/data=!3m1!4b1!4m5!3m4!1s0x48742aad6dfc80ff:0x27c616347529d7!8m2!3d51.3351136!4d-0.7539365">
+                <a
+                  href="https://www.google.com/maps/place/Lea+House,+37+Southwell+Park+Rd,+Camberley+GU15+3QG/@51.3351136,-0.7561252,17z/data=!3m1!4b1!4m5!3m4!1s0x48742aad6dfc80ff:0x27c616347529d7!8m2!3d51.3351136!4d-0.7539365">
                   <p class="heading"><i class="fas fa-map-marker-alt"></i>
                   </p>
 
@@ -135,10 +142,7 @@
 
       <article class="hero is-fullheight">
         <section class="container has-text-centered">
-          <em></em>
-
           <hr>
-
 
           <p class="subtitle"><em>An ambitious, highly motivated individual seeking a placement position to enable
               skills
@@ -149,38 +153,174 @@
         </section>
 
 
-        <section class="container has-text-centered">
-          <h1 class="title">Work History</h1>
+        <section class="container">
+          <div class="has-text-centered">
+            <h2 class="title">Education</h2>
+          </div>
 
           <hr>
 
 
-          <h2 class="subtitle"><span>Math And English Tutor</span> | <span><em>Kumon</em> &ndash; Frimley, England</span>
-            | <span>2017&ndash; Current</span></h2>
+          <h3 class="title is-4 has-text-centered">BSc Computer Science (Software Engineering) with a Year in Industry
+            <br></h3>
+
+
+          <ul class="container ul">
+            <li>Second Year Undergraduate Student at Royal Holloway graduating in 2022
+            </li>
+
+            <li>First year grade average 80.5% 1st
+            </li>
+
+            <li>Programming languages & Frameworks used: Java 11, maven, JavaFX Javascript, NodeJS, HTML5, CSS3,
+              EmberJS,
+              ReactJS, Bulma CSS, SASS, Webpack, Git, Font-awesome 5, Python
+            </li>
+
+          </ul>
+
+          <hr>
 
 
           <div>
-            <ul>
-              <li>Tutored up to A level students in Maths and English.</li>
+            <h3 class="title is-4 has-text-centered">A Levels</h3>
 
 
-              <li>Helped them to complete their work and do corrections.</li>
+            <ul class="content ul">
+              <li>Computer Science (A); Created a chess application in Java using OOP principles.</li>
 
 
-              <li>Documented progression.</li>
+              <li>EPQ (A); Designed and manufactured a Shogi set, using software and a CNC mill.</li>
+
+
+              <li>Psychology (A)</li>
+
+
+              <li>Maths (B)</li>
+
             </ul>
 
             <hr>
           </div>
 
 
+          <div>
+            <h3 class="title is-4 has-text-centered">GCSE's</h3>
+
+
+            <p class="has-text-centered"><em>14 GCSE's A*&ndash;B; Including A* in Electronics, and A's in Computing,
+                Maths, English literature
+                and English language.</em>
+            </p>
+
+            <hr>
+          </div>
+
+        </section>
+
+        <section class="container">
+          <div class="has-text-centered">
+            <h2 class="title">Skills</h2>
+          </div>
+
+          <hr>
+
+
+          <div class="columns">
+            <div class="column">
+              <div class="content">
+                <ul class="ul-left">
+
+                  <strong>Front-end web Developer:</strong>
+
+                  <li> Carpark management system in React.</li>
+                  <li> HTML5 canvas tower defence game.</li>
+                  <li> Rock Paper Scissors game in Ember for a hackathon.</li>
+                  <li> Static homepage for an actress in Vue with Nuxt.</li>
+
+                  <strong> Java Developer:</strong>
+
+                  <li> Playable JavaFX chess application with SQL-lite database for storing game history.</li>
+                  <li> Robot to scan an area for landmines, collect them and return them to a checkpoint.</li>
+                </ul>
+              </div>
+            </div>
+
+
+            <div class="column">
+              <div class="content">
+                <ul class="ul-right">
+                  <strong> Dev-Ops:</strong>
+
+                  <li> Hosting using VPS services such as AWS EC3 instance and Google compute.</li>
+                  <li> Command line interfaces such as ubuntu subsystem for windows.</li>
+                  <li> Webpack configurations incorporating several plugins.</li>
+
+                  <strong> Full-stack Developer:</strong>
+
+                  <li> Firebase admin panel with secure sign in for a church website.</li>
+
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <hr>
+        </section>
+
+        <section class="container ">
+          <h1 class="title has-text-centered">Work History</h1>
+
+          <hr>
+
           <div class="container">
-            <h2 class="subtitle"><span>IT And Marketing</span> | <span><em>VocaLink &ndash; Hertfordshire, England</em></span>
+
+            <h2 class="title is-4 has-text-centered"><span>Math And English Tutor</span> | <span><em>Kumon</em> &ndash;
+                Frimley,
+                England</span>
+              | <span>2017&ndash; 2019</span></h2>
+
+
+            <div>
+              <ul class="ul">
+                <li>Tutored up to A level students in Maths and English.</li>
+
+
+                <li>Helped them to complete their work and do corrections.</li>
+
+
+                <li>Documented progression.</li>
+              </ul>
+
+              <hr>
+            </div>
+          </div>
+
+
+          <div class="container">
+
+            <h2 class="title is-4 has-text-centered"><span>Student Ambassador</span> | <span><em>Royal Holloway</em>
+                | <span>2019&ndash; current</span></h2>
+
+
+            <div>
+              <ul class="ul">
+                <li>Campus Tours, Carpark management, and roles in the computer science department</li>
+              </ul>
+
+              <hr>
+            </div>
+          </div>
+
+          <div class="container">
+            <h2 class="title is-4 has-text-centered"><span>IT And Marketing</span> | <span><em>VocaLink &ndash;
+                  Hertfordshire,
+                  England</em></span>
               | <span>03/2016 &ndash; 03/2016</span></h2>
 
 
             <div>
-              <ul>
+              <ul class="ul">
                 <li><strong>Work Experience Placement</strong> at a large online payments and banking company.</li>
 
 
@@ -199,148 +339,48 @@
         </section>
 
 
-        <section class="container">
-          <div class="has-text-centered">
-            <h2 class="title">Skills</h2>
-          </div>
-
-          <hr>
 
 
-          <div class="columns">
-            <div class="column">
-              <div class="content">
-                <ul>
-                  <li>Front-end developer: For coursework I worked on the frontend of a carpark management system in
-                    React and an HTML5 canvas tower defense game. I also created the fronted for a multiplayer rock
-                    paper
-                    scissors game at the hackathon Royal Hackaway. in EmberJS.</li>
-
-
-                  <li>Self driven and quick to learn &ndash; Originally I self taught myself JavaScript through online
-                    boot-camps and textbooks</li>
-
-
-                  <li>Time management - developed through academic studies</li>
-                </ul>
-              </div>
-            </div>
-
-
-            <div class="column">
-              <div class="content">
-                <ul>
-                  <li>Linux &ndash; I use the Ubuntu subsystem for Windows, and have hosted a website from my own Linux
-                    AWS server. I am familiar with command line interfaces.</li>
-
-
-                  <li>Team worker: I enjoy being in groups and have been apart of several projects. One such project
-                    was
-                    creating a Lego Technic EV3 robot and writing code in a team such that it would scan an area for
-                    landmines, collect them and return them to a checkpoint.</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <hr>
-        </section>
 
 
         <section class="container">
-          <div>
-            <div class="has-text-centered">
-              <h2 class="title">Education</h2>
-            </div>
-
-            <hr>
+          <h3 class="title is-4 has-text-centered">Additional Skills and Achievements</h3>
 
 
-            <h3 class="subtitle">BSc (software egineering): Computer Science With A Year In Industry <span style="float:right;">Royal
-                Holloway
-                &ndash; Surrey, England 2023</span><br></h3>
+          <ul class="ul">
+            <li><strong> Programming </strong> &ndash; Extracurricular club "programming polyglots", each week a new
+              programming language was taught. (2017 - 2018)</li>
 
+            <li><strong> Public Speaking</strong> &ndash; Mock student elections and mock United Nations.</li>
 
-            <ul class="content">
-              <li><strong>First Year Undergraduate Student</strong>
-              </li>
+            <li><strong> Computer Literate </strong>&ndash; Loves computers, good understanding of both hardware and
+              software. Skilled in Microsoft office; PowerPoint and Excel.</li>
 
-
-              <li><em>Programming languages &amp; Frameworks used:</em> Java 11, maven, Javafx Javascript, NodeJS,
-                HTML5,
-                CSS3, EmberJS, ReactJS, Bulma CSS, SASS, Webpack, Git, Font-awesome 5, Python</li>
-            </ul>
-
-            <hr>
-
-
-            <div>
-              <h3 class="subtitle">A Levels <span style="float:right;">The Sixth Form College Farnborough - Hampshire,
-                  England 2018</span></h3>
-
-
-              <ul class="content">
-                <li>Computer Science (A); Created a chess application in Java using OOP principles.</li>
-
-
-                <li>Maths (B)</li>
-
-
-                <li>Psychology (A)</li>
-
-
-                <li>EPQ (A); Designed and manufactured a Shogi set, using software and a CNC mill.</li>
-              </ul>
-
-              <hr>
-            </div>
-
-
-            <div>
-              <h3 class="subtitle">GCSE's <span style="float:right;">Collingwood College &ndash; Surrey, England 2016</span></h3>
-
-
-              <p><em>14 GCSE's A*&ndash;B; Including A* in Electronics, and A's in Computing, Maths, English literature
-                  and English language.</em>
-              </p>
-
-              <hr>
-            </div>
-          </div>
-
-
-          <h3 class="subtitle">Additional Information</h3>
-
-
-          <ul>
-            <li>&bull; Programming &ndash; Extracurricular club "programming polyglots", each week a new programming
-              language was taught.</li>
-
-
-            <li>&bull; Public Speaking &ndash; Attended political events such as cpf, student mock elections, and mock
-              United Nations and have spoken publicly.</li>
-
-
-            <li>&bull; Computer Literate &ndash; Loves computers, good understanding of both hardware and software. Can
-              use Microsoft office; powerpoint; excel etc.</li>
-
-
-            <li>&bull; Volunteering &ndash; Leader of both the Japanese society and the Chess society during sixth
-              form.
-              Student ambassador; (former) Air cadet;</li>
+            <li> <strong> Volunteering </strong> &ndash; Leader of both the Japanese society and the Chess society (2017
+              - 2018). Student ambassador; Air cadet (pre 2018).</li>
           </ul>
 
+          <h4 class="section subtitle is-5 has-text-centered"><em>Letter of commendation from department for being one
+              of
+              only 20 students achieving an overall grade
+              point
+              average of 80 or over.</em>
+          </h4>
+
           <hr>
 
 
-          <h3 class="subtitle">Certifications</h3>
+          <h3 class="title is-4 has-text-centered">Hobbies and Interests</h3>
 
 
-          <ul>
-            <li>&bull; ECDL IT Application Skills Cert &ndash; DISTINCTION *</li>
+          <ul class="ul" style="font-style: italic;">
+            <li> Photography </li>
+            <li> Web Development </li>
+            <li> Listening to Podcasts </li>
+            <li> Psychology </li>
+            <li> Chess and strategic computer games </li>
+            <li> Japanese culture </li>
 
-
-            <li>&bull; DofE Award Bronze &ndash; Pass</li>
           </ul>
 
           <hr>
@@ -379,7 +419,7 @@
   <script>
     window.onbeforeunload = () => {
       window.scrollTo(0, 0);
-			document.body.style.zoom = 1.0;
+      document.body.style.zoom = 1.0;
     }
 
   </script>
