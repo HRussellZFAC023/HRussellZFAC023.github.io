@@ -1,334 +1,427 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <title>Henry Russell CV</title>
+  <head>
+    <meta charset="utf-8" />
+    <title>Henry Russell CV</title>
 
-  <!-- Icons & CSS -->
-  <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css"
-  />
+    <!-- Icons & CSS -->
+    <script
+      defer
+      src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css"
+    />
 
-  <style>
-    html,
-    body {
-      background-color: #f5f7fa;
-    }
+    <style>
+      html,
+      body {
+        background-color: #f5f7fa;
+      }
 
-    .cv-wrapper {
-      margin-top: 2.5rem;
-      margin-bottom: 2.5rem;
-    }
+      .cv-wrapper {
+        margin-top: 2.5rem;
+        margin-bottom: 2.5rem;
+      }
 
-    .cv-box {
-      max-width: clamp(320px, 90vw, 960px);
-      margin: auto;
-    }
+      .cv-box {
+        max-width: clamp(320px, 90vw, 960px);
+        margin: auto;
+      }
 
+      /* Animate in */
+      .scale-up-center {
+        animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+      }
 
-    /* Animate in */
-    .scale-up-center {
-      animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-    }
+      @keyframes scale-up-center {
+        0% {
+          transform: scale(0.85);
+          opacity: 0;
+        }
+        100% {
+          transform: scale(1);
+          opacity: 1;
+        }
+      }
+    </style>
+  </head>
 
-    @keyframes scale-up-center {
-      0% { transform: scale(0.85); opacity: 0; }
-      100% { transform: scale(1); opacity: 1; }
-    }
-  </style>
-</head>
-
-<body class="scale-up-center">
-  <main class="cv-wrapper">
-    <div class="box cv-box">
-
-      <!-- HEADER -->
-      <section class="hero is-small is-info">
-        <div class="hero-body">
-          <div class="section has-text-centered">
-            <h1 class="title is-1">Henry Russell</h1>
-          </div>
-
-          <nav class="columns level">
-            <div class="column level-item has-text-centered">
-              <a class="icon-text" href="mailto:henry@therussellhouse.com">
-                <p class="heading"><i class="fas fa-envelope"></i></p>
-                <p>Henry@therussellhouse.com</p>
-              </a>
+  <body class="scale-up-center">
+    <main class="cv-wrapper">
+      <div class="box cv-box">
+        <!-- HEADER -->
+        <section class="hero is-small is-info">
+          <div class="hero-body">
+            <div class="section has-text-centered">
+              <h1 class="title is-1">Henry Russell</h1>
             </div>
 
-            <div class="column level-item has-text-centered">
-              <a
-                href="https://www.google.com/maps/place/Lea+House,+37+Southwell+Park+Rd,+Camberley+GU15+3QG/"
+            <nav class="columns level">
+              <div class="column level-item has-text-centered">
+                <a class="icon-text" href="mailto:henry@therussellhouse.com">
+                  <p class="heading"><i class="fas fa-envelope"></i></p>
+                  <p>Henry@therussellhouse.com</p>
+                </a>
+              </div>
+
+              <div class="column level-item has-text-centered">
+                <a
+                  href="https://www.google.com/maps/place/Lea+House,+37+Southwell+Park+Rd,+Camberley+GU15+3QG/"
+                >
+                  <p class="heading"><i class="fas fa-map-marker-alt"></i></p>
+                  <p>37 Southwell Park Road, Surrey, London GU15 3QG</p>
+                </a>
+              </div>
+
+              <div class="column level-item has-text-centered">
+                <a href="tel:+44-747-255-9755">
+                  <p class="heading"><i class="fas fa-phone"></i></p>
+                  <p>+44 7472 559755</p>
+                </a>
+              </div>
+            </nav>
+          </div>
+        </section>
+
+        <!-- WORK HISTORY -->
+        <section class="section">
+          <h2 class="title is-4 has-text-centered">Work History</h2>
+
+          <div class="content">
+            <!-- Primary Role -->
+            <article class="media">
+              <div class="media-content">
+                <p class="mb-1">
+                  <strong>Advanced Software Engineer</strong>
+                  <span class="is-pulled-right has-text-grey"
+                    >2022 - Present</span
+                  >
+                </p>
+                <p class="has-text-grey-dark is-italic mb-2">Zühlke, London</p>
+                <p>
+                  Front-end focused consultant building reliable web applications
+                  across finance, retail and internal tools. Strong in React,
+                  Vue and TypeScript, with practical AWS experience and a
+                  product-driven approach to delivering features.
+                </p>
+                <ul class="mt-2 ml-4">
+                  <li>
+                    <strong
+                      >Handelsbanken (Mortgage Application Platform)</strong
+                    >
+                    <br />
+                    Developed a TypeScript/React application allowing customers
+                    to submit financial information for mortgage applications.
+                    Worked with design and backend teams to create accessible,
+                    streamlined journeys.
+                  </li>
+                  <li>
+                    <strong>Swiss Bank (AWS Bedrock Chatbot UI)</strong>
+                    <br />
+                    Created a Vue interface integrated with AWS Bedrock for a
+                    chatbot supporting housing and financing queries, improving
+                    customer experience with responsive, conversational UI.
+                  </li>
+                  <li>
+                    <strong>Co-op Funeralcare (Digital Products Team)</strong>
+                    <br />
+                    Developed Python services and Vue microfrontends as part of
+                    a blended engineering team. Helped create new journeys and retire legacy systems to
+                    support customers using Vue, TypeScript,
+                    Python, Django and AWS.
+                  </li>
+                </ul>
+              </div>
+            </article>
+
+            <!-- Secondary Role -->
+            <article class="media">
+              <div class="media-content">
+                <p class="mb-1">
+                  <strong>Computer Science Teacher</strong>
+                  <span class="is-pulled-right has-text-grey">2022 - 2024</span>
+                </p>
+                <p class="has-text-grey-dark is-italic mb-2">
+                  Academic Tutors Surrey
+                </p>
+                <p>
+                  One-to-one A-level Computer Science tuition, including lesson
+                  planning, explaining core topics and providing coursework
+                  feedback.
+                </p>
+              </div>
+            </article>
+
+            <!-- Internship -->
+            <article class="media">
+              <div class="media-content">
+                <p class="mb-1">
+                  <strong>Software Engineer Internship</strong>
+                  <span class="is-pulled-right has-text-grey">Summer 2021</span>
+                </p>
+                <p class="has-text-grey-dark is-italic mb-2">Royal Holloway</p>
+                <p>
+                  Lead developer for a student module-selection web platform
+                  integrating with internal university systems and used by
+                  students.
+                </p>
+              </div>
+            </article>
+
+            <!-- Teaching Assistant -->
+            <article class="media">
+              <div class="media-content">
+                <p class="mb-1">
+                  <strong>Computer Science Teaching Assistant</strong>
+                  <span class="is-pulled-right has-text-grey">2020 - 2021</span>
+                </p>
+                <p class="has-text-grey-dark is-italic mb-2">Royal Holloway</p>
+                <p>
+                  Supported first-year programming labs and assisted with
+                  marking coursework.
+                </p>
+              </div>
+            </article>
+
+            <!-- Student Ambassador -->
+            <article class="media">
+              <div class="media-content">
+                <p class="mb-1">
+                  <strong>Student Ambassador</strong>
+                  <span class="is-pulled-right has-text-grey">2019 - 2020</span>
+                </p>
+                <p class="has-text-grey-dark is-italic mb-2">Royal Holloway</p>
+                <p>
+                  Represented the university at open days, campus tours and
+                  events within the Computer Science department.
+                </p>
+              </div>
+            </article>
+
+            <!-- Kumon Tutor -->
+            <article class="media">
+              <div class="media-content">
+                <p class="mb-1">
+                  <strong>Math and English Tutor</strong>
+                  <span class="is-pulled-right has-text-grey">2017 - 2019</span>
+                </p>
+                <p class="has-text-grey-dark is-italic mb-2">Kumon, Frimley</p>
+                <p>
+                  Tutored students up to A-level, helping them progress through
+                  the Kumon programme and build confidence in core subjects.
+                </p>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <!-- EDUCATION -->
+        <section class="section">
+          <h2 class="title is-4 has-text-centered">Education</h2>
+
+          <div class="content">
+            <strong>MSc Software Systems Engineering</strong>
+            <p><em>UCL (2021-2022), Distinction.</em></p>
+            <p>
+              Research collaboration with Intel and Microsoft: developed a
+              Visual Studio plugin for gesture-based, touchless interaction with
+              the IDE.
+            </p>
+          </div>
+
+          <div class="content">
+            <strong>BSc Computer Science (Software Engineering)</strong>
+            <p>
+              <em
+                >Royal Holloway, University of London (2018-2021), First-Class
+                Honours, avg 80%.</em
               >
-                <p class="heading"><i class="fas fa-map-marker-alt"></i></p>
-                <p>37 Southwell Park Road, Surrey, London GU15 3QG</p>
-              </a>
+            </p>
+            <ul>
+              <li>
+                Computer Science Prize for outstanding final-year project
+                (2021).
+              </li>
+              <li>
+                Best Second-Year Software Engineering Group Project (2020).
+              </li>
+              <li>Top academic performer (2019).</li>
+            </ul>
+          </div>
+
+          <div class="content">
+            <strong>A Levels & GCSE</strong>
+            <ul>
+              <li>
+                <em
+                  >Computer Science (A), EPQ (A), Psychology (A), Maths (B).</em
+                >
+              </li>
+              <li>
+                <em>
+                  14 GCSEs A-B, including A grades in Electronics, Computing,
+                  Maths, English and Sciences.
+                </em>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- SKILLS -->
+        <section class="section">
+          <h2 class="title is-4 has-text-centered">Skills and Projects</h2>
+
+          <div class="columns">
+            <div class="column">
+              <div class="content">
+                <p class="has-text-weight-semibold">Front-End Engineering</p>
+                <ul>
+                  <li>
+                    React, Vue, TypeScript, component-driven architecture and
+                    modern UI patterns.
+                  </li>
+                  <li>
+                    <span>Actress portfolio website</span> SEO-optimised
+                    portfolio with CI/CD deployment (<a
+                      href="https://wendyannedaloz.com/"
+                      target="_blank"
+                      >wendyannedaloz.com</a
+                    >).
+                  </li>
+                  <li>
+                    <span>VTuber site</span> retro Neocities project blending
+                    nostalgic design with interactive games and layouts (<a
+                      href="https://babybelle.neocities.org/"
+                      target="_blank"
+                      >babybelle.neocities.org</a
+                    >).
+                  </li>
+                  <li>
+                    Electron-based design-thinking tool built for IBM ideation
+                    workshops.
+                  </li>
+                  <li>
+                    Interactive HTML5 canvas and creative web experiments.
+                  </li>
+                </ul>
+
+                <p class="has-text-weight-semibold">
+                  Full-Stack & Systems Development
+                </p>
+                <ul>
+                  <li>
+                    CI/CD content platforms and production-ready portfolio
+                    deployments.
+                  </li>
+                  <li>
+                    Microservices-based multiplayer and real-time environments.
+                  </li>
+                  <li>React dashboards backed by Python API services.</li>
+                  <li>
+                    <span>Royal Holloway module-selection system</span> used
+                    internally by students.
+                  </li>
+                  <li>
+                    Kanji-learning automation tools; built an unofficial API and
+                    a system that adds AI-generated mnemonic hints into a
+                    language-learning platform.
+                  </li>
+                </ul>
+              </div>
             </div>
 
-            <div class="column level-item has-text-centered">
-              <a href="tel:+44-747-255-9755">
-                <p class="heading"><i class="fas fa-phone"></i></p>
-                <p>+44 7472 559755</p>
-              </a>
+            <div class="column">
+              <div class="content">
+                <p class="has-text-weight-semibold">
+                  Java & Backend Engineering
+                </p>
+                <ul>
+                  <li>JavaFX chess engine with SQLite persistence layer.</li>
+                  <li>
+                    Autonomous Lego Mindstorms robot for search-and-retrieve
+                    tasks.
+                  </li>
+                  <li>
+                    Experience applying MVC, Observer and Factory patterns in
+                    test-driven builds.
+                  </li>
+                </ul>
+
+                <p class="has-text-weight-semibold">
+                  Cloud, Tooling & Automation
+                </p>
+                <ul>
+                  <li>AWS Solutions Architect Associate (2024).</li>
+                  <li>
+                    Deploying and integrating applications across AWS and Azure.
+                  </li>
+                  <li>Linux-based development workflows and automation.</li>
+                  <li>
+                    Docker for lightweight multi-service development
+                    environments.
+                  </li>
+                  <li>
+                    <span>ChatGPT Automation Pro</span>; Firefox extension that
+                    automates ChatGPT workflows (<a
+                      href="https://addons.mozilla.org/en-US/firefox/addon/chatgpt-automation-pro/"
+                      target="_blank"
+                      >extension page</a
+                    >).
+                  </li>
+                  <li>
+                    <span>UserScript Compiler</span> that converts userscripts
+                    into installable extensions (<a
+                      href="https://hrussellzfac023.github.io/UserScript-Compiler/"
+                      target="_blank"
+                      >project page</a
+                    >).
+                  </li>
+                  <li>
+                    Experience with AI-augmented development and A/B
+                    experimentation.
+                  </li>
+                </ul>
+              </div>
             </div>
-          </nav>
-        </div>
-      </section>
+          </div>
+        </section>
 
-      <!-- WORK HISTORY -->
-      <section class="section">
-        <h2 class="title is-4 has-text-centered">Work History</h2>
-
-        <div class="content">
-          <!-- Primary Role -->
-          <article class="media">
-            <div class="media-content">
-              <p class="mb-1">
-                <strong>Advanced Software Engineer</strong>
-                <span class="is-pulled-right has-text-grey">2022 – Present</span>
-              </p>
-              <p class="has-text-grey-dark is-italic mb-2">Zühlke, London</p>
-              <p>
-                Front-end focused engineer building reliable web applications across finance, retail and internal tools.
-                Strong in React, Vue and TypeScript, with practical AWS experience and a product-driven approach to
-                delivering features.
-              </p>
-              <ul class="mt-2" style="margin-left: 1rem;">
-                <li><strong>Handelsbanken – Mortgage Application Platform:</strong> Developed a TypeScript/React application allowing customers to submit financial information for mortgage applications. Worked with design and backend teams to create accessible, streamlined flows.</li>
-                <li><strong>Swiss Bank – AWS Bedrock Chatbot UI:</strong> Created a Vue interface integrated with AWS Bedrock for a chatbot supporting housing and financing queries, improving customer experience with responsive, conversational UI.</li>
-                <li><strong>Co-op Funeralcare – Unified Commerce Platform:</strong> Developed Python services and Vue microfrontends as part of a blended engineering team. Helped retire legacy systems and support event-driven retail operations using Vue, TypeScript, GraphQL, Python, Django and Azure.</li>
-              </ul>
-            </div>
-          </article>
-
-
-          <!-- Secondary Role -->
-          <article class="media">
-            <div class="media-content">
-              <p class="mb-1">
-                <strong>Computer Science Teacher</strong>
-                <span class="is-pulled-right has-text-grey">2022 – 2024</span>
-              </p>
-              <p class="has-text-grey-dark is-italic mb-2">Academic Tutors Surrey</p>
-              <p>
-                One-to-one A-level Computer Science tuition, including lesson planning, explaining core topics and
-                providing coursework feedback.
-              </p>
-            </div>
-          </article>
-
-
-          <!-- Internship -->
-          <article class="media">
-            <div class="media-content">
-              <p class="mb-1">
-                <strong>Software Engineer Internship</strong>
-                <span class="is-pulled-right has-text-grey">Summer 2021</span>
-              </p>
-              <p class="has-text-grey-dark is-italic mb-2">Royal Holloway</p>
-              <p>
-                Lead developer for a student module-selection web platform integrating with internal university
-                systems and used by students.
-              </p>
-            </div>
-          </article>
-
-
-          <!-- Teaching Assistant -->
-          <article class="media">
-            <div class="media-content">
-              <p class="mb-1">
-                <strong>Computer Science Teaching Assistant</strong>
-                <span class="is-pulled-right has-text-grey">2020 – 2021</span>
-              </p>
-              <p class="has-text-grey-dark is-italic mb-2">Royal Holloway</p>
-              <p>
-                Supported first-year programming labs and assisted with marking coursework.
-              </p>
-            </div>
-          </article>
-
-
-          <!-- Student Ambassador -->
-          <article class="media">
-            <div class="media-content">
-              <p class="mb-1">
-                <strong>Student Ambassador</strong>
-                <span class="is-pulled-right has-text-grey">2019 – 2020</span>
-              </p>
-              <p class="has-text-grey-dark is-italic mb-2">Royal Holloway</p>
-              <p>
-                Represented the university at open days, campus tours and events within the Computer Science department.
-              </p>
-            </div>
-          </article>
-
-
-          <!-- Kumon Tutor -->
-          <article class="media">
-            <div class="media-content">
-              <p class="mb-1">
-                <strong>Math and English Tutor</strong>
-                <span class="is-pulled-right has-text-grey">2017 – 2019</span>
-              </p>
-              <p class="has-text-grey-dark is-italic mb-2">Kumon, Frimley</p>
-              <p>
-                Tutored students up to A-level, helping them progress through the Kumon programme and build confidence in
-                core subjects.
-              </p>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <!-- EDUCATION -->
-      <section class="section">
-        <h2 class="title is-4 has-text-centered ">Education</h2>
-
-        <div class="content ">
-          <h3 class="title is-5">MSc Software Systems Engineering</h3>
-          <p><em>UCL (2021–2022), Distinction.</em></p>
-          <p>
-            Research collaboration with Intel and Microsoft: developed a Visual Studio plugin for gesture-based,
-            touchless interaction with the IDE.
-          </p>
-        </div>
-
-        <div class="content ">
-          <h3 class="title is-5">BSc Computer Science (Software Engineering)</h3>
-          <p><em>Royal Holloway, University of London (2018–2021), First-Class Honours, avg 80%.</em></p>
-          <ul>
-            <li>Computer Science Prize for outstanding final-year project (2021).</li>
-            <li>Best Second-Year Software Engineering Group Project (2020).</li>
-            <li>Top academic performer (2019).</li>
-          </ul>
-        </div>
-
-        <div class="content">
-          <h3 class="title is-5">A Levels & GCSE</h3>
-          <ul>
-            <li><em>Computer Science (A), EPQ (A), Psychology (A), Maths (B).</em></li>
-            <li>
+        <!-- HOBBIES -->
+        <section class="section">
+          <h3 class="title is-5 has-text-centered">Hobbies and Interests</h3>
+          <div class="content has-text-centered">
+            <p>
               <em>
-                14 GCSEs A–B, including A grades in Electronics, Computing, Maths, English and Sciences.
+                Web Development, Japanese, Chess, Strategic Games, Podcasts,
+                Photography
               </em>
-            </li>
-          </ul>
-        </div>
-      </section>
+            </p>
+          </div>
+        </section>
 
-      <!-- SKILLS -->
-      <section class="section">
-        <h2 class="title is-4 has-text-centered ">Skills and projects</h2>
-
-        <div class="columns">
-          <div class="column">
-            <div class="content">
-              <p class="has-text-weight-semibold">Front-End Engineering</p>
-              <ul>
-                <li>React, Vue, TypeScript and modern component-driven UIs.</li>
-                <li>Electron-based design-thinking tool for IBM.</li>
-                <li>Interactive HTML5 canvas and creative web experiences.</li>
-                <li>SEO-optimised portfolio sites with CI/CD (e.g. <em>wendyannedaloz.com</em>).</li>
-                <li>
-                  Retro-inspired Neocities VTuber site blending modern performance with nostalgic design.
-                </li>
-              </ul>
-
-              <p class="has-text-weight-semibold ">Full-Stack & Systems Development</p>
-              <ul>
-                <li>CI/CD portfolio and content platforms.</li>
-                <li>Microservices-based multiplayer and real-time environments.</li>
-                <li>React dashboards with Python APIs.</li>
-                <li>Module selection system used internally at Royal Holloway.</li>
-                <li>
-                  Unofficial Uchisen API and JPDB integration inserting AI-generated kanji mnemonics into
-                  study workflows.
-                </li>
-              </ul>
+        <!-- FOOTER -->
+        <footer class="section">
+          <div class="columns">
+            <div class="column has-text-centered">
+              <a href="https://www.linkedin.com/in/hrussell-zfac023/">
+                <h3 class="is-size-6">
+                  <i class="fab fa-linkedin"></i>
+                  linkedin.com/in/hrussell-zfac023
+                </h3>
+              </a>
+            </div>
+            <div class="column has-text-centered">
+              <a href="https://github.com/HRussellZFAC023">
+                <h3 class="is-size-6">
+                  <i class="fab fa-github-alt"></i> github.com/HRussellZFAC023
+                </h3>
+              </a>
             </div>
           </div>
-
-          <div class="column">
-            <div class="content">
-              <p class="has-text-weight-semibold">Java & Backend Engineering</p>
-              <ul>
-                <li>JavaFX chess engine with SQLite persistence.</li>
-                <li>Autonomous Lego Mindstorms robot for search and retrieval.</li>
-                <li>Use of MVC, Observer and Factory patterns in test-driven projects.</li>
-              </ul>
-
-              <p class="has-text-weight-semibold ">Cloud & Platform Experience</p>
-              <ul>
-                <li>AWS Solutions Architect Associate (2024).</li>
-                <li>Practical experience deploying and integrating applications on AWS and Azure.</li>
-                <li>Comfortable using Linux for development and tooling.</li>
-                <li>Docker for local development and lightweight service setups.</li>
-                <li>
-                  Created productivity tooling such as a ChatGPT automation extension and userscript compiler.
-                </li>
-                <li>Experience with AI-augmented development and experimentation.</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- ADDITIONAL SKILLS & ACHIEVEMENTS -->
-      <section class="section">
-        <h3 class="title is-4 has-text-centered ">Additional Skills and Achievements</h3>
-
-        <div class="content">
-          <ul>
-            <li>AWS Solutions Architect – Associate (2024).</li>
-            <li>IBM Design Thinking Practitioner (2022).</li>
-            <li>Google FooBar Level 3 (2020).</li>
-            <li>LinkedIn JavaScript Assessment (2020).</li>
-            <li>Founder of “Programming Polyglots”.</li>
-            <li>Japanese club and chess club leader.</li>
-            <li>Bronze Duke of Edinburgh; former air cadet.</li>
-            <li>Public speaking experience (Model UN, university events).</li>
-            <li>Conversational Japanese (2.5 years UCL evening study).</li>
-          </ul>
-        </div>
-      </section>
-
-      <!-- HOBBIES -->
-      <section class="section">
-        <h3 class="title is-5 has-text-centered ">Hobbies and Interests</h3>
-        <div class="content has-text-centered">
-          <p>
-            <em>
-              Web Development, Japanese, Psychology, Chess, Strategic Games, Podcasts, Photography
-            </em>
-          </p>
-        </div>
-      </section>
-
-      <!-- FOOTER -->
-      <footer class="section">
-        <div class="columns">
-          <div class="column has-text-centered">
-            <a href="https://www.linkedin.com/in/hrussell-zfac023/">
-              <h3 class="is-size-6">
-                <i class="fab fa-linkedin"></i> linkedin.com/in/hrussell-zfac023
-              </h3>
-            </a>
-          </div>
-          <div class="column has-text-centered">
-            <a href="https://github.com/HRussellZFAC023">
-              <h3 class="is-size-6">
-                <i class="fab fa-github-alt"></i> github.com/HRussellZFAC023
-              </h3>
-            </a>
-          </div>
-        </div>
-      </footer>
-
-    </div>
-  </main>
-</body>
+        </footer>
+      </div>
+    </main>
+  </body>
 </html>
