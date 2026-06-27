@@ -30,6 +30,37 @@
         margin: auto;
       }
 
+      .contact-item,
+      .footer-item {
+        color: inherit;
+      }
+
+      .project-name {
+        font-weight: 600;
+      }
+
+      @media print {
+        body {
+          background-color: #ffffff;
+        }
+
+        .cv-wrapper {
+          margin: 0;
+        }
+
+        .cv-box {
+          box-shadow: none;
+          max-width: none;
+        }
+
+        section,
+        article,
+        .content {
+          break-inside: avoid;
+          page-break-inside: avoid;
+        }
+      }
+
       /* Animate in */
       .scale-up-center {
         animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
@@ -60,26 +91,24 @@
 
             <nav class="columns level">
               <div class="column level-item has-text-centered">
-                <a class="icon-text" href="mailto:henry@therussellhouse.com">
+                <div class="icon-text contact-item">
                   <p class="heading"><i class="fas fa-envelope"></i></p>
                   <p>Henry@therussellhouse.com</p>
-                </a>
+                </div>
               </div>
 
               <div class="column level-item has-text-centered">
-                <a
-                  href="https://www.google.com/maps/place/Lea+House,+37+Southwell+Park+Rd,+Camberley+GU15+3QG/"
-                >
+                <div class="contact-item">
                   <p class="heading"><i class="fas fa-map-marker-alt"></i></p>
                   <p>37 Southwell Park Road, Surrey, London GU15 3QG</p>
-                </a>
+                </div>
               </div>
 
               <div class="column level-item has-text-centered">
-                <a href="tel:+44-747-255-9755">
+                <div class="contact-item">
                   <p class="heading"><i class="fas fa-phone"></i></p>
                   <p>+44 7472 559755</p>
-                </a>
+                </div>
               </div>
             </nav>
           </div>
@@ -101,14 +130,25 @@
                   >
                 </p>
                 <p class="has-text-grey-dark is-italic mb-2">Zühlke, London</p>
+
                 <p class="mb-1">
+                  <strong>Barclaycard Payments – Marketing Site</strong>
+                </p>
+                <p class="has-text-grey-dark is-italic mb-2">
+                  Next.js, React, TypeScript, Contentful, Salesforce, Pricing API
+                </p>
+                <p>
+                  Working for a large UK-based bank on creating its marketing site. One of two developers on the project; helped define the Contentful content model, built reusable templates with content editors, and integrated Salesforce and pricing API flows.
+                </p>
+
+                <p class="mb-1 mt-4">
                   <strong>Co-op Funeralcare (Digital Products Team)</strong>
                 </p>
                 <p class="has-text-grey-dark is-italic mb-2">
                   Vue, TypeScript, Python, Django, AWS, Contentful, Adobe Target
                 </p>
                 <p>
-                  Built and maintained Vue microfrontends and Jinja/Contentful templates to build key customer journeys (Direct Cremation, funeral home finder). Delivered a new finder application during a code-freeze incident, created a shared component library with support for web components, and implemented Adobe Target A/B tests (client-side scripting, variant logic, KPI monitoring). Contributed to Python/Django services, Lambda-backed integrations, and active monitoring. Facilitated agile ceremonies, tech-debt reviews, and knowledge-sharing sessions, in an award-winning team we reached a record 15.85% market share.
+                  Built Vue microfrontends and Contentful/Jinja templates for key customer journeys, including Direct Cremation and funeral home finder. Delivered a new finder app during a code-freeze incident, created a shared component library with web component support, implemented Adobe Target A/B tests, and contributed to Python/Django services, AWS integrations and monitoring. Helped facilitate agile ceremonies and technical knowledge sharing in an award-winning team that reached a record 15.85% market share.
                 </p>
 
                 <p class="mb-1 mt-4">
@@ -118,7 +158,7 @@
                   Vue, TypeScript, AWS Bedrock
                 </p>
                 <p>
-                  Built a lightweight Vue front end integrating with AWS Bedrock for a mortgage chatbot in a 10-day delivery window, focusing on clean architecture and easy client extensibility.
+                  Built a lightweight Vue front end for an AWS Bedrock mortgage chatbot in a 10-day delivery window, focusing on clean architecture and client extensibility.
                 </p>
 
                 <!-- Initial role -->
@@ -134,7 +174,7 @@
                   React, TypeScript, React Testing Library, Java, TDD, SAFE
                 </p>
                 <p>
-                  Developed regulated mortgage application journeys under strict constraints (no external libraries). Implemented custom routing, state management, validation, and a debounced autosave system using React hooks and shared stores. Practised TDD and pair programming; collaborated closely with QA in a shift-left workflow. Integrated with internal banking systems (document generation, data services) and delivered a successful MVP as part of a blended team.
+                  Developed regulated mortgage application journeys under strict technical constraints, including custom routing, state management, validation and debounced autosave. Practised TDD and pair programming, collaborated closely with QA in a shift-left workflow, and integrated with internal banking systems for document generation and data services.
                 </p>
               </div>
             </article>
@@ -282,50 +322,40 @@
                 <p class="has-text-weight-semibold">Front-End Engineering</p>
                 <ul>
                   <li>
-                    React, Vue, TypeScript, component-driven architecture and
-                    modern UI patterns.
+                    React, Vue, Next.js, TypeScript, Contentful, component-driven architecture and modern UI patterns.
                   </li>
                   <li>
-                    <span>Actress portfolio website</span> SEO-optimised
-                    portfolio with CI/CD deployment (<a
-                      href="https://wendyannedaloz.com/"
-                      target="_blank"
-                      >wendyannedaloz.com</a
-                    >).
+                    Production marketing and customer-journey templates built with content editors, reusable components and testing in mind.
                   </li>
                   <li>
-                    <span>Creator website</span> interactive mini-games and an
-                    old-web themed design (<a
-                      href="https://babybelle.neocities.org/"
-                      target="_blank"
-                      >babybelle.neocities.org</a
-                    >).
-                  </li>
-
-                  <li>
-                    Electron-based design-thinking tool built for IBM ideation
-                    workshops.
+                    <span class="project-name">Portfolio website:</span>
+                    SEO-optimised portfolio for an actress with CI/CD deployment.
                   </li>
                   <li>
-                    Interactive HTML5 canvas and creative web experiments.
+                    <span class="project-name">VTuber creator website:</span>
+                    interactive mini-games and old-web themed design.
+                  </li>
+                  <li>
+                    React interview practice lab with Vite, Playwright checks and GitHub Pages deployment guidance.
                   </li>
                 </ul>
 
                 <p class="has-text-weight-semibold">Full-Stack & Systems</p>
                 <ul>
                   <li>
-                    Kanji-learning automation tools; built an unofficial API and
-                    a system that adds AI-generated mnemonic hints into a
-                    language-learning platform.
+                    <span class="project-name">Yomu:</span>
+                    TypeScript userscript and web app for Japanese reading across websites, manga, PDFs and video, with popup dictionary, OCR, subtitle mining, JPDB, Anki, Jiten, Yomitan and a PWA study surface.
                   </li>
                   <li>
-                    Microservices-based multiplayer and real-time chess
-                    tournament application.
+                    Kanji learning automation tools which add AI-generated mnemonics.
+                  </li>
+                  <li>
+                    Voiceworks Toolkit for Japanese immersion workflows with local transcription, translation and semantic search.
                   </li>
                   <li>React dashboards backed by Python API services.</li>
                   <li>
-                    <span>Royal Holloway module-selection system</span> used
-                    internally by students.
+                    <span class="project-name">Royal Holloway module-selection system:</span>
+                    used internally by students.
                   </li>
                 </ul>
               </div>
@@ -333,7 +363,7 @@
 
             <div class="column">
               <div class="content">
-                <p class="has-text-weight-semibold">Java</p>
+                <p class="has-text-weight-semibold">Java and Software Design</p>
                 <ul>
                   <li>JavaFX chess engine with SQLite persistence layer.</li>
                   <li>
@@ -352,28 +382,22 @@
                 <ul>
                   <li>AWS Solutions Architect Associate (2024).</li>
                   <li>
-                    Deploying and integrating applications across AWS and Azure.
-                  </li>
-                  <li>Linux-based development workflows and automation.</li>
-                  <li>
-                    Docker for lightweight multi-service development
-                    environments.
+                    AWS, Azure, Docker, Linux workflows, CI/CD and automation.
                   </li>
                   <li>
-                    <span>ChatGPT Automation Pro</span>; Firefox extension that
-                    automates ChatGPT workflows (<a
-                      href="https://addons.mozilla.org/en-US/firefox/addon/chatgpt-automation-pro/"
-                      target="_blank"
-                      >extension page</a
-                    >).
+                    <span class="project-name">UserScript Compiler:</span>
+                    converts userscripts into installable Manifest V3 extensions.
                   </li>
                   <li>
-                    <span>UserScript Compiler</span> that converts userscripts
-                    into installable extensions (<a
-                      href="https://hrussellzfac023.github.io/UserScript-Compiler/"
-                      target="_blank"
-                      >project page</a
-                    >).
+                    <span class="project-name">Templafy folder downloader:</span>
+                    retrieves original assets from library folders.
+                  </li>
+                  <li>
+                    <span class="project-name">ChatGPT Automation Pro:</span>
+                    browser automation for repeatable ChatGPT workflows.
+                  </li>
+                  <li>
+                    Microservices-based multiplayer and real-time chess tournament application.
                   </li>
                 </ul>
               </div>
@@ -388,8 +412,8 @@
             <p>
               <em>
                 Web development, Japanese language study, chess and strategy
-                games, psychology and human behaviour, photography, AI-augmented
-                development, and life-long learning.
+                games, psychology, photography, AI-augmented development, and
+                life-long learning.
               </em>
             </p>
           </div>
@@ -399,19 +423,15 @@
         <footer class="section">
           <div class="columns">
             <div class="column has-text-centered">
-              <a href="https://www.linkedin.com/in/hrussell-zfac023/">
-                <h3 class="is-size-6">
-                  <i class="fab fa-linkedin"></i>
-                  linkedin.com/in/hrussell-zfac023
-                </h3>
-              </a>
+              <h3 class="is-size-6 footer-item">
+                <i class="fab fa-linkedin"></i>
+                linkedin.com/in/hrussell-zfac023
+              </h3>
             </div>
             <div class="column has-text-centered">
-              <a href="https://github.com/HRussellZFAC023">
-                <h3 class="is-size-6">
-                  <i class="fab fa-github-alt"></i> github.com/HRussellZFAC023
-                </h3>
-              </a>
+              <h3 class="is-size-6 footer-item">
+                <i class="fab fa-github-alt"></i> github.com/HRussellZFAC023
+              </h3>
             </div>
           </div>
         </footer>
