@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://henry.russell.ac/sitemap.xml
