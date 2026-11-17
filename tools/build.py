@@ -38,7 +38,7 @@ def inline_runs(text):
 
 def project_runs(text):
     """Keep printed project addresses while making them usable in every format."""
-    pattern = r"(?:github\.com/[A-Za-z0-9_-]+/[A-Za-z0-9_.-]+|yomureader\.com|barclaycardpayments\.com|coop\.co\.uk/funeralcare)"
+    pattern = r"(?:github\.com/[A-Za-z0-9_-]+/[A-Za-z0-9_.-]+|yomureader\.com|barclaycardpayments\.com|coop\.co\.uk/funeralcare|zuehlke-skill-hub\.pages\.dev)"
     start = 0
     for match in re.finditer(pattern, text):
         yield text[start:match.start()], None

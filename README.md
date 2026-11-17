@@ -6,7 +6,7 @@ The web page **is** the CV: it is laid out as A4 sheets, `CV.pdf` is that page p
 
 ## Edit and rebuild
 
-This repository builds the public CV from `data/cv.json`. In the full career workspace, the master record is the sibling `cv-variants/make.py`, which generates this JSON and the four tailored variants. Make content changes there and run `python rebuild.py` from the career workspace root to keep all versions aligned. The tailored variants and research are private workspace materials and are not part of this public website repository.
+This repository builds the public CV from `data/cv.json`. In the full career workspace, the master record is the sibling `cv-variants/make.py`, which generates this JSON. Make content changes there and run `rebuild.py` from the career workspace root to keep the website, PDF and Word file aligned. The research is private workspace material and is not part of this public website repository.
 
 To rebuild just this public website from its existing JSON:
 
