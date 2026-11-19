@@ -53,7 +53,7 @@
      ],
      [
       "Front end",
-      "React, Next.js, Vue, Storybook, design systems, web components, Contentful, WCAG AA"
+      "React, Next.js, Vue, Storybook, design systems, web components, Contentful, WCAG AA, Zod, state management (custom external stores with hooks, React Context, Redux, Pinia)"
      ],
      [
       "Back end and cloud",
@@ -61,15 +61,15 @@
      ],
      [
       "Data and AI",
-      "SQL (Postgres, D1), semantic search, speech-to-text, LLM chat on AWS Bedrock"
+      "SQL (Postgres, D1), vector search (Jina), in-browser Whisper (Transformers.js), AWS Bedrock"
      ],
      [
       "Testing and delivery",
-      "TDD, React Testing Library, Playwright, GitHub Actions, A/B testing (Adobe Target)"
+      "TDD, React Testing Library, Playwright, Lighthouse, Datadog RUM, GitHub Actions"
      ],
      [
       "Agentic engineering",
-      "Codex, Claude Code, MCP, agent skills, agent rules (AGENTS.md), CI regression gates"
+      "Codex, Claude Code, MCP, agent skills, AGENTS.md rules, llms.txt, CI regression gates"
      ],
      [
       "Product",
@@ -95,26 +95,27 @@
    {
     "type": "bullets",
     "items": [
-     "One of two engineers who delivered the Barclaycard Payments marketing site in three months.",
-     "Created a shared, organisation-wide design system in Storybook to succeed the bank's existing one.",
+     "One of two engineers who delivered the Barclaycard Payments site in three months with AI acceleration: a pipeline that turns Figma designs into Storybook components, and AI updates to Contentful.",
+     "Created a shared Storybook design system, planned for use across the whole organisation as the successor to the bank's existing one, and built it fast with a very small team.",
      "Built more than 20 bespoke components from Figma designs, to the bank's standards and WCAG AA: hero variants, carousels, price cards, grids, a mega nav, breadcrumbs and accessible animations.",
-     "Designed the Contentful content model with the content editors: one price type reused across the site, and a custom variant selector so one component covers many designs.",
-     "When the Contentful licence did not arrive in time, shipped the site as a static build, using the trial CMS to load content and test how components fit together."
+     "Added AI-based validation, and agent-ready analytics in Datadog RUM.",
+     "Turned client call transcripts into requirements and tickets with AI.",
+     "Designed the Contentful content model with the content editors: one price type reused across the site, and a custom variant selector so one component covers many designs."
     ]
    },
    {
     "type": "project",
     "name": "Co-op Funeralcare · digital products team · coop.co.uk/funeralcare",
-    "tech": "Vue, Python, Django, AWS, Contentful, Adobe Target"
+    "tech": "Vue, Pinia, Python, Django, AWS, Contentful, Adobe Target"
    },
    {
     "type": "bullets",
     "items": [
-     "Created the new \"Find a funeral home\" finder as its main engineer: address search, a Google Maps view and the API behind it, on desktop and mobile.",
-     "The team built it in about three months during the code freeze that followed the 2025 Co-op cyber attack, as a standalone app so it could still ship.",
-     "Built Vue micro-frontends, Contentful/Jinja templates and a shared component library with web component support, for customer journeys including Direct Cremation.",
+     "Created the new \"Find a funeral home\" finder as its main engineer: address search, a Google Maps view and the API behind it, on desktop and mobile. The team built it in about three months during the code freeze after the 2025 Co-op cyber attack, as a standalone app so it could still ship.",
+     "Built Vue micro-frontends with Pinia for state, Contentful/Jinja templates and a shared component library with web component support, for customer journeys including Direct Cremation.",
      "Implemented A/B tests in Adobe Target, and contributed to Python/Django services, AWS and monitoring.",
-     "Facilitated agile ceremonies and technical knowledge sharing in a team that regularly won Co-op's internal awards for its ways of working."
+     "Used coding agents to refactor and clean up technical debt, and set up automated checks for accessibility, Lighthouse scores and agent readiness, including an llms.txt.",
+     "Facilitated agile ceremonies in a team that regularly won Co-op's internal awards for its ways of working."
     ]
    },
    {
@@ -140,10 +141,10 @@
     "type": "bullets",
     "items": [
      "Built mortgage fact-find journeys in React and TypeScript under strict technical constraints: no third-party libraries, a custom router, and forms that branch on the applicant's answers.",
+     "Built our own state layer: small stores outside React behind custom hooks, and React Context for app-wide values.",
      "Wrote reusable hooks for debounced autosave and a shared validation pattern used across the forms.",
      "Added server-side validation in Java 8 on Liberty to match the front-end rules, pairing across the stack.",
-     "Practised TDD and pair programming, and collaborated closely with QA in a shift-left workflow.",
-     "Integrated with internal banking systems for document generation and data services."
+     "Practised TDD and pairing with QA, and integrated with the bank's systems for documents and data."
     ]
    },
    {
@@ -154,8 +155,7 @@
    {
     "type": "bullets",
     "items": [
-     "After an AI workshop where management asked for a brand design skill, saw that the real gap was having no way to share agent skills, and built and deployed a catalogue for it in one day.",
-     "Agents can search the catalogue and pick up the right skill for a task. Wrote the first skill from existing brand materials and used it to style the hub."
+     "After an AI workshop where management asked for a brand design skill, saw the real gap was sharing agent skills, and built a catalogue agents can search in one day, styled by its first skill."
     ]
    },
    {
@@ -192,9 +192,22 @@
     "items": [
      "Developer, designer and product owner of an advanced learning system for Japanese, bringing all of a learner's study apps into one place and tracking their immersion.",
      "Shipped as a website, a browser extension, phone and desktop apps, and a plugin for ChatGPT and Claude.",
-     "Built an instant pop-up dictionary for web pages, manga, PDFs and video, one review queue shared with Anki, JPDB, WaniKani, Bunpro and Jiten, and speech-to-text and search by meaning over a learner's own materials.",
+     "Built an instant pop-up dictionary for web pages, manga, PDFs and video, one review queue shared with Anki, JPDB, WaniKani, Bunpro and Jiten.",
      "Utilised coding agents (Codex and Claude Code) extensively to build features, verify changes and iterate on ideas, backed by automated checks and a regression test for every fix.",
      "Works closely with Yomu's users, turning their feedback into fixes and new features."
+    ]
+   },
+   {
+    "type": "project",
+    "flat": true,
+    "name": "In-browser speech-to-text and semantic search",
+    "tech": "TypeScript, Hugging Face Transformers.js, Whisper, Jina embeddings, WebGPU, IndexedDB"
+   },
+   {
+    "type": "bullets",
+    "flat": true,
+    "items": [
+     "Built Japanese speech-to-text that runs entirely in the browser (Whisper on WebGPU), turning any audio into subtitles, and search by meaning with Jina embeddings stored in IndexedDB."
     ]
    },
    {
@@ -225,19 +238,15 @@
     "type": "edu",
     "title": "BSc Computer Science (Software Engineering)",
     "meta": "Royal Holloway, University of London · 2018 – 2021 · First-Class Honours (avg 80%)",
-    "text": "Computer Science Prize for outstanding final-year project (2021). Best Second-Year Software Engineering Group Project (2020). Top academic performer (2019). Second-year team project: an asset management system in React, Flask and Postgres."
+    "text": "Computer Science Prize for outstanding final-year project (2021). Best Second-Year Software Engineering Group Project (2020). Top academic performer (2019). Team project in React, Flask and Postgres."
    },
    {
     "type": "para",
     "text": "**Certification:** AWS Certified Solutions Architect – Associate (2024)."
    },
    {
-    "type": "section",
-    "title": "Interests"
-   },
-   {
     "type": "para",
-    "text": "Japanese language study, chess and strategy games, psychology, photography."
+    "text": "**Interests:** Japanese language study, chess and strategy games, psychology, photography."
    }
   ]
  ],
