@@ -85,66 +85,73 @@
     "type": "role",
     "title": "Advanced Software Engineer",
     "dates": "Jan 2024 – Present",
-    "org": "Zühlke Engineering, London · Professional Software Engineer, Sep 2022 – Jan 2024"
+    "org": "Zühlke Engineering, London, a global engineering consultancy · Professional Software Engineer, Sep 2022 – Jan 2024"
    },
    {
     "type": "project",
-    "name": "Barclaycard Payments · marketing site · barclaycardpayments.com",
-    "tech": "Next.js, React, TypeScript, Contentful, Storybook, Motion"
+    "name": "Barclaycard Payments · card payments for UK businesses · barclaycardpayments.com",
+    "tech": "Next.js, React, TypeScript, Contentful, Storybook, Motion, Datadog RUM"
    },
    {
     "type": "bullets",
     "items": [
-     "One of two engineers who delivered the Barclaycard Payments site in three months with AI acceleration: a pipeline that turns Figma designs into Storybook components, and AI updates to Contentful.",
-     "Created a shared Storybook design system, planned for use across the whole organisation as the successor to the bank's existing one, and built it fast with a very small team.",
-     "Built more than 20 bespoke components from Figma designs, to the bank's standards and WCAG AA: hero variants, carousels, price cards, grids, a mega nav, breadcrumbs and accessible animations.",
-     "Added AI-based validation, and agent-ready analytics in Datadog RUM.",
-     "Turned client call transcripts into requirements and tickets with AI.",
+     "Delivered the new marketing site in three months as one of two engineers, where a much larger team would take over a year, using AI to turn Figma designs into Storybook components and update Contentful.",
+     "Created a shared Storybook design system to succeed the bank's existing one, built fast with a very small team and now also used by the developer portal and the onboarding journey.",
+     "Built more than 20 bespoke components to the bank's standards and WCAG AA: hero variants, carousels, price cards, grids, a mega nav, breadcrumbs and accessible animations.",
+     "Turned client call transcripts into requirements and tickets with an AI factory, taking the team from one ticket every two to three days to about 30 a week.",
+     "Added AI-based validation, and agent-ready analytics in Datadog RUM tracking pages, journeys and bounces, which showed traffic moving from the old site to the new one after launch.",
      "Designed the Contentful content model with the editors (one price type reused site-wide, a variant selector so one component covers many designs), and shipped a static build when the licence came late."
     ]
    },
    {
     "type": "project",
-    "name": "Co-op Funeralcare · digital products team · coop.co.uk/funeralcare",
+    "name": "PostFinance · Swiss bank · AI mortgage assistant",
+    "tech": "Vue, TypeScript, AWS Bedrock, RAG"
+   },
+   {
+    "type": "bullets",
+    "items": [
+     "Built the first chat interface for a mortgage assistant in a 10-day prototype, from the client team's designs: a lightweight Vue front end on a RAG assistant on AWS Bedrock answering from the bank's content.",
+     "Focused on clean architecture and client extensibility so the client team could carry it on, and the prototype became the AI chatbot now on PostFinance's website."
+    ]
+   },
+   {
+    "type": "project",
+    "name": "Co-op Funeralcare · the UK's largest funeral provider · coop.co.uk/funeralcare",
     "tech": "Vue, Pinia, Python, Django, AWS, Contentful, Adobe Target"
    },
    {
     "type": "bullets",
     "items": [
-     "Created the \"Find a funeral home\" finder as main engineer (address search, Google Maps, API, desktop and mobile). The team shipped it as a standalone app in three months, through the code freeze after Co-op's 2025 cyber attack.",
-     "Built Vue micro-frontends, Contentful/Jinja templates and a shared component library with web component support, for customer journeys including Direct Cremation.",
-     "Used Pinia extensively to manage state across the Vue micro-frontends.",
-     "Implemented A/B tests in Adobe Target, and contributed to Python/Django services, AWS and monitoring.",
-     "Used coding agents to refactor and clean up technical debt, and set up automated checks for accessibility, Lighthouse scores and agent readiness, including an llms.txt.",
-     "Facilitated agile ceremonies in a team that regularly won Co-op's internal awards for its ways of working."
-    ]
-   },
-   {
-    "type": "project",
-    "name": "PostFinance · AI assistant prototype",
-    "tech": "Vue, TypeScript, AWS Bedrock"
-   },
-   {
-    "type": "bullets",
-    "items": [
-     "Built the first chat interface for a mortgage assistant in a 10-day prototype, from the client team's designs: a lightweight Vue front end on AWS Bedrock that answers from the bank's own content.",
-     "Focused on clean architecture and client extensibility, so the client team could carry it on."
+     "Increased callback requests by 60% through A/B tests in Adobe Target: a new hero style, a callback button in the nav bar, and clearer calls to action into the at-need and pre-need journeys.",
+     "Created the \"Find a funeral home\" finder as main engineer, covering more than 800 funeral homes (address search, Google Maps, API, desktop and mobile). The team shipped it as a standalone app in three months, through the code freeze after Co-op's 2025 cyber attack.",
+     "Built Vue micro-frontends, Contentful/Jinja templates and a shared web component library for journeys like Direct Cremation, which families on Trustpilot said made arranging online easier than face to face.",
+     "Managed state across the Vue micro-frontends with Pinia backed by local storage, sharing booking and search state between independent apps and keeping each journey's state predictable and testable.",
+     "Took Lighthouse from amber to green with faster image loading and less unused or duplicate JavaScript, and used Claude Code to fix spacing, content width and contrast from automated accessibility checks."
     ]
    }
   ],
   [
    {
+    "type": "bullets",
+    "items": [
+     "Used coding agents to clean up technical debt, added Cloudflare's agent readiness checks and an llms.txt, and contributed to Python/Django services, AWS and monitoring.",
+     "Facilitated agile ceremonies in a team that regularly won Co-op's internal awards for its ways of working."
+    ]
+   },
+   {
     "type": "project",
-    "name": "Handelsbanken · mortgage application platform",
+    "name": "Handelsbanken UK · mortgage application platform for branch advisers",
     "tech": "React, TypeScript, React Testing Library, Java, TDD, SAFe"
    },
    {
     "type": "bullets",
     "items": [
+     "Built the platform every Handelsbanken UK mortgage now goes through, rolled out from a few trial branches to all 140-plus UK branches, replacing spreadsheets and speeding up the fact-find.",
      "Built mortgage fact-find journeys in React and TypeScript under strict technical constraints: no third-party libraries, a custom router, and forms that branch on the applicant's answers.",
      "Built our own state management: many small stores kept outside React, each read through a custom hook so components only re-render on the data they use.",
      "Kept fast-changing form state in those stores, and used React Context only for app-wide values.",
-     "Wrote reusable hooks for debounced autosave and a shared validation pattern used across the forms.",
+     "Wrote reusable debounced autosave hooks so advisers never lose work, and a shared validation pattern.",
      "Added server-side validation in Java 8 on Liberty to match the front-end rules, pairing across the stack.",
      "Practised TDD and pairing with QA, and integrated with the bank's systems for documents and data."
     ]
@@ -157,7 +164,8 @@
    {
     "type": "bullets",
     "items": [
-     "After an AI workshop where managers asked for a brand design skill, saw the real gap was sharing agent skills, and took a catalogue agents can search from idea to production in a day, styled by its first skill."
+     "After an AI workshop where managers asked for a brand design skill, saw the real gap was sharing agent skills, and took a catalogue agents can search from idea to production in a day, styled by its first skill.",
+     "Teammates have added over 20 skills, and colleagues say the brand skills greatly improved their workflow."
     ]
    },
    {
@@ -195,22 +203,9 @@
      "Developer, designer and product owner of an advanced learning system for Japanese, bringing all of a learner's study apps into one place and tracking their immersion.",
      "Shipped as a website, a browser extension, and phone and desktop apps.",
      "Built an MCP server so ChatGPT and Claude can use Yomu as a plugin: study in the sidebar and cards in chat.",
-     "Built an instant pop-up dictionary for web pages, manga, PDFs and video, one review queue shared with Anki, JPDB, WaniKani, Bunpro and Jiten.",
+     "Built an instant pop-up dictionary for web pages, manga, PDFs and video, one review queue shared with Anki, JPDB, WaniKani, Bunpro and Jiten, and speech-to-text (Whisper on WebGPU) and search by meaning (Jina embeddings) over a learner's own materials.",
      "Utilised coding agents (Codex and Claude Code) extensively to build features, verify changes and iterate on ideas, backed by automated checks and a regression test for every fix.",
-     "Works closely with Yomu's users, turning their feedback into fixes and new features."
-    ]
-   },
-   {
-    "type": "project",
-    "flat": true,
-    "name": "In-browser speech-to-text and semantic search",
-    "tech": "TypeScript, Hugging Face Transformers.js, Whisper, Jina embeddings, WebGPU, IndexedDB"
-   },
-   {
-    "type": "bullets",
-    "flat": true,
-    "items": [
-     "Built Japanese speech-to-text that runs entirely in the browser (Whisper on WebGPU), turning any audio into subtitles, and search by meaning with Jina embeddings stored in IndexedDB."
+     "Works closely with about 20 early users who use it daily, turning their feedback into fixes and new features."
     ]
    },
    {

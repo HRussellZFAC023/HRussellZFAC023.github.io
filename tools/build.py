@@ -20,7 +20,7 @@ ROOT = Path(__file__).resolve().parent.parent
 BLUE = "1976D2"  # a shade deeper than the original Bulma blue (#209CEE), so white text passes WCAG AA (4.6:1)
 
 # One set of sizes (points) shared by the web page and the Word document.
-PT = dict(body=10, small=9, contact=9, name=24, title=12.5, section=14, role=10.5)
+PT = dict(body=9.75, small=9, contact=9, name=24, title=12.5, section=14, role=10.5)
 
 
 # ---------------------------------------------------------------- inline text
@@ -60,7 +60,7 @@ CSS = """
       body {
         font-family: "Open Sans", "Segoe UI", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
         font-size: %(body)spt;
-        line-height: 1.36;
+        line-height: 1.28;
         color: var(--ink);
         -webkit-print-color-adjust: exact;
         print-color-adjust: exact;
@@ -118,6 +118,7 @@ CSS = """
       .role { display: flex; justify-content: space-between; align-items: baseline; margin-top: 2mm; font-size: %(role)spt; }
       .role .dates, .org, .tech, .meta { font-style: italic; font-weight: 400; color: var(--grey); }
       .org { margin-bottom: 0.6mm; }
+      .org-inline { font-style: italic; font-weight: 400; color: var(--grey); font-size: %(body)spt; }
       .project { margin: 1.3mm 0 0 5mm; font-weight: 700; }
       .project a { text-decoration: underline; text-underline-offset: 2px; }
       .tech { margin-left: 5mm; font-size: %(small)spt; }
@@ -184,9 +185,11 @@ def block_html(b):
     if t == "para":
         return f'<p class="para">{inline_html(b["text"])}</p>'
     if t == "role":
-        out = (f'<h3 class="role"><span>{inline_html(b["title"])}</span>'
+        org_inline = (f'<span class="org-inline"> · {inline_html(b["org"])}</span>'
+                      if b.get("inline") and b.get("org") else "")
+        out = (f'<h3 class="role"><span>{inline_html(b["title"])}{org_inline}</span>'
                f'<span class="dates">{inline_html(b["dates"])}</span></h3>')
-        if b.get("org"):
+        if b.get("org") and not b.get("inline"):
             out += f'\n<p class="org">{inline_html(b["org"])}</p>'
         return out
     if t == "project":
@@ -427,8 +430,10 @@ def build_docx(cv, path):
             p.paragraph_format.keep_with_next = True
             p.paragraph_format.tab_stops.add_tab_stop(text_width, WD_TAB_ALIGNMENT.RIGHT)
             add_text(p, b["title"], size=PT["role"], bold=True)
+            if b.get("inline") and b.get("org"):
+                add_text(p, " · " + b["org"], italic=True, color=GREY)
             add_text(p, "\t" + b["dates"], size=PT["role"], italic=True, color=GREY)
-            if b.get("org"):
+            if b.get("org") and not b.get("inline"):
                 p = add_text(para(), b["org"], italic=True, color=GREY)
                 p.paragraph_format.space_after = Pt(1.5)
                 p.paragraph_format.keep_with_next = True

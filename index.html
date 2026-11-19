@@ -29,8 +29,8 @@
       html, body { margin: 0; background-color: #f5f7fa; }
       body {
         font-family: "Open Sans", "Segoe UI", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
-        font-size: 10pt;
-        line-height: 1.36;
+        font-size: 9.75pt;
+        line-height: 1.28;
         color: var(--ink);
         -webkit-print-color-adjust: exact;
         print-color-adjust: exact;
@@ -88,6 +88,7 @@
       .role { display: flex; justify-content: space-between; align-items: baseline; margin-top: 2mm; font-size: 10.5pt; }
       .role .dates, .org, .tech, .meta { font-style: italic; font-weight: 400; color: var(--grey); }
       .org { margin-bottom: 0.6mm; }
+      .org-inline { font-style: italic; font-weight: 400; color: var(--grey); font-size: 9.75pt; }
       .project { margin: 1.3mm 0 0 5mm; font-weight: 700; }
       .project a { text-decoration: underline; text-underline-offset: 2px; }
       .tech { margin-left: 5mm; font-size: 9pt; }
@@ -171,42 +172,46 @@
         <p class="skill"><strong>Product:</strong> user feedback, product decisions, content modelling, agile facilitation, knowledge sharing, teaching</p>
         <h2>Experience</h2>
         <h3 class="role"><span>Advanced Software Engineer</span><span class="dates">Jan 2024 – Present</span></h3>
-        <p class="org">Zühlke Engineering, London · Professional Software Engineer, Sep 2022 – Jan 2024</p>
-        <h4 class="project">Barclaycard Payments · marketing site · <a href="https://barclaycardpayments.com">barclaycardpayments.com</a></h4>
-        <p class="tech">Next.js, React, TypeScript, Contentful, Storybook, Motion</p>
+        <p class="org">Zühlke Engineering, London, a global engineering consultancy · Professional Software Engineer, Sep 2022 – Jan 2024</p>
+        <h4 class="project">Barclaycard Payments · card payments for UK businesses · <a href="https://barclaycardpayments.com">barclaycardpayments.com</a></h4>
+        <p class="tech">Next.js, React, TypeScript, Contentful, Storybook, Motion, Datadog RUM</p>
         <ul>
-          <li>One of two engineers who delivered the Barclaycard Payments site in three months with AI acceleration: a pipeline that turns Figma designs into Storybook components, and AI updates to Contentful.</li>
-          <li>Created a shared Storybook design system, planned for use across the whole organisation as the successor to the bank's existing one, and built it fast with a very small team.</li>
-          <li>Built more than 20 bespoke components from Figma designs, to the bank's standards and WCAG AA: hero variants, carousels, price cards, grids, a mega nav, breadcrumbs and accessible animations.</li>
-          <li>Added AI-based validation, and agent-ready analytics in Datadog RUM.</li>
-          <li>Turned client call transcripts into requirements and tickets with AI.</li>
+          <li>Delivered the new marketing site in three months as one of two engineers, where a much larger team would take over a year, using AI to turn Figma designs into Storybook components and update Contentful.</li>
+          <li>Created a shared Storybook design system to succeed the bank's existing one, built fast with a very small team and now also used by the developer portal and the onboarding journey.</li>
+          <li>Built more than 20 bespoke components to the bank's standards and WCAG AA: hero variants, carousels, price cards, grids, a mega nav, breadcrumbs and accessible animations.</li>
+          <li>Turned client call transcripts into requirements and tickets with an AI factory, taking the team from one ticket every two to three days to about 30 a week.</li>
+          <li>Added AI-based validation, and agent-ready analytics in Datadog RUM tracking pages, journeys and bounces, which showed traffic moving from the old site to the new one after launch.</li>
           <li>Designed the Contentful content model with the editors (one price type reused site-wide, a variant selector so one component covers many designs), and shipped a static build when the licence came late.</li>
         </ul>
-        <h4 class="project">Co-op Funeralcare · digital products team · <a href="https://coop.co.uk/funeralcare">coop.co.uk/funeralcare</a></h4>
+        <h4 class="project">PostFinance · Swiss bank · AI mortgage assistant</h4>
+        <p class="tech">Vue, TypeScript, AWS Bedrock, RAG</p>
+        <ul>
+          <li>Built the first chat interface for a mortgage assistant in a 10-day prototype, from the client team's designs: a lightweight Vue front end on a RAG assistant on AWS Bedrock answering from the bank's content.</li>
+          <li>Focused on clean architecture and client extensibility so the client team could carry it on, and the prototype became the AI chatbot now on PostFinance's website.</li>
+        </ul>
+        <h4 class="project">Co-op Funeralcare · the UK's largest funeral provider · <a href="https://coop.co.uk/funeralcare">coop.co.uk/funeralcare</a></h4>
         <p class="tech">Vue, Pinia, Python, Django, AWS, Contentful, Adobe Target</p>
         <ul>
-          <li>Created the "Find a funeral home" finder as main engineer (address search, Google Maps, API, desktop and mobile). The team shipped it as a standalone app in three months, through the code freeze after Co-op's 2025 cyber attack.</li>
-          <li>Built Vue micro-frontends, Contentful/Jinja templates and a shared component library with web component support, for customer journeys including Direct Cremation.</li>
-          <li>Used Pinia extensively to manage state across the Vue micro-frontends.</li>
-          <li>Implemented A/B tests in Adobe Target, and contributed to Python/Django services, AWS and monitoring.</li>
-          <li>Used coding agents to refactor and clean up technical debt, and set up automated checks for accessibility, Lighthouse scores and agent readiness, including an llms.txt.</li>
-          <li>Facilitated agile ceremonies in a team that regularly won Co-op's internal awards for its ways of working.</li>
-        </ul>
-        <h4 class="project">PostFinance · AI assistant prototype</h4>
-        <p class="tech">Vue, TypeScript, AWS Bedrock</p>
-        <ul>
-          <li>Built the first chat interface for a mortgage assistant in a 10-day prototype, from the client team's designs: a lightweight Vue front end on AWS Bedrock that answers from the bank's own content.</li>
-          <li>Focused on clean architecture and client extensibility, so the client team could carry it on.</li>
+          <li>Increased callback requests by 60% through A/B tests in Adobe Target: a new hero style, a callback button in the nav bar, and clearer calls to action into the at-need and pre-need journeys.</li>
+          <li>Created the "Find a funeral home" finder as main engineer, covering more than 800 funeral homes (address search, Google Maps, API, desktop and mobile). The team shipped it as a standalone app in three months, through the code freeze after Co-op's 2025 cyber attack.</li>
+          <li>Built Vue micro-frontends, Contentful/Jinja templates and a shared web component library for journeys like Direct Cremation, which families on Trustpilot said made arranging online easier than face to face.</li>
+          <li>Managed state across the Vue micro-frontends with Pinia backed by local storage, sharing booking and search state between independent apps and keeping each journey's state predictable and testable.</li>
+          <li>Took Lighthouse from amber to green with faster image loading and less unused or duplicate JavaScript, and used Claude Code to fix spacing, content width and contrast from automated accessibility checks.</li>
         </ul>
       </section>
       <section class="sheet">
-        <h4 class="project">Handelsbanken · mortgage application platform</h4>
+        <ul>
+          <li>Used coding agents to clean up technical debt, added Cloudflare's agent readiness checks and an llms.txt, and contributed to Python/Django services, AWS and monitoring.</li>
+          <li>Facilitated agile ceremonies in a team that regularly won Co-op's internal awards for its ways of working.</li>
+        </ul>
+        <h4 class="project">Handelsbanken UK · mortgage application platform for branch advisers</h4>
         <p class="tech">React, TypeScript, React Testing Library, Java, TDD, SAFe</p>
         <ul>
+          <li>Built the platform every Handelsbanken UK mortgage now goes through, rolled out from a few trial branches to all 140-plus UK branches, replacing spreadsheets and speeding up the fact-find.</li>
           <li>Built mortgage fact-find journeys in React and TypeScript under strict technical constraints: no third-party libraries, a custom router, and forms that branch on the applicant's answers.</li>
           <li>Built our own state management: many small stores kept outside React, each read through a custom hook so components only re-render on the data they use.</li>
           <li>Kept fast-changing form state in those stores, and used React Context only for app-wide values.</li>
-          <li>Wrote reusable hooks for debounced autosave and a shared validation pattern used across the forms.</li>
+          <li>Wrote reusable debounced autosave hooks so advisers never lose work, and a shared validation pattern.</li>
           <li>Added server-side validation in Java 8 on Liberty to match the front-end rules, pairing across the stack.</li>
           <li>Practised TDD and pairing with QA, and integrated with the bank's systems for documents and data.</li>
         </ul>
@@ -214,6 +219,7 @@
         <p class="tech">Cloudflare, Microsoft Entra sign-in, coding agents</p>
         <ul>
           <li>After an AI workshop where managers asked for a brand design skill, saw the real gap was sharing agent skills, and took a catalogue agents can search from idea to production in a day, styled by its first skill.</li>
+          <li>Teammates have added over 20 skills, and colleagues say the brand skills greatly improved their workflow.</li>
         </ul>
         <h3 class="role"><span>Computer Science Teacher (part-time)</span><span class="dates">2022 – 2024</span></h3>
         <p class="org">Academic Tutors Surrey · one-to-one A-level Computer Science tuition</p>
@@ -228,14 +234,9 @@
           <li>Developer, designer and product owner of an advanced learning system for Japanese, bringing all of a learner's study apps into one place and tracking their immersion.</li>
           <li>Shipped as a website, a browser extension, and phone and desktop apps.</li>
           <li>Built an MCP server so ChatGPT and Claude can use Yomu as a plugin: study in the sidebar and cards in chat.</li>
-          <li>Built an instant pop-up dictionary for web pages, manga, PDFs and video, one review queue shared with Anki, JPDB, WaniKani, Bunpro and Jiten.</li>
+          <li>Built an instant pop-up dictionary for web pages, manga, PDFs and video, one review queue shared with Anki, JPDB, WaniKani, Bunpro and Jiten, and speech-to-text (Whisper on WebGPU) and search by meaning (Jina embeddings) over a learner's own materials.</li>
           <li>Utilised coding agents (Codex and Claude Code) extensively to build features, verify changes and iterate on ideas, backed by automated checks and a regression test for every fix.</li>
-          <li>Works closely with Yomu's users, turning their feedback into fixes and new features.</li>
-        </ul>
-        <h3 class="project flat">In-browser speech-to-text and semantic search</h3>
-        <p class="tech flat">TypeScript, Hugging Face Transformers.js, Whisper, Jina embeddings, WebGPU, IndexedDB</p>
-        <ul class="flat">
-          <li>Built Japanese speech-to-text that runs entirely in the browser (Whisper on WebGPU), turning any audio into subtitles, and search by meaning with Jina embeddings stored in IndexedDB.</li>
+          <li>Works closely with about 20 early users who use it daily, turning their feedback into fixes and new features.</li>
         </ul>
         <h3 class="project flat">UserScript Compiler · <a href="https://github.com/HRussellZFAC023/UserScript-Compiler">github.com/HRussellZFAC023/UserScript-Compiler</a></h3>
         <p class="tech flat">React, Vite, Node.js · Aug 2025 – Jul 2026</p>
