@@ -75,7 +75,7 @@ CSS = """
       .sheet {
         width: 210mm;
         height: 297mm;
-        padding: 8mm 13mm 8mm;
+        padding: 7mm 13mm 7mm;
         margin: 0 auto 2rem;
         background: #fff;
         border-radius: 6px;
@@ -88,7 +88,7 @@ CSS = """
         background: var(--blue);
         color: #fff;
         text-align: center;
-        padding: 4mm 4mm 4.5mm;
+        padding: 3.5mm 4mm 3.5mm;
       }
       .contact {
         font-style: normal;
@@ -125,7 +125,7 @@ CSS = """
       .tech.flat { margin-left: 0; }
       ul { padding-left: 9.5mm; list-style-type: "•  "; }  /* a text bullet, so it survives PDF text extraction */
       ul.flat { padding-left: 4.5mm; }
-      li { margin: 0.35mm 0; }
+      li { margin: 0.15mm 0; }
       .skill { margin-bottom: 0.7mm; }
       .edu { margin-top: 1.6mm; }
 
@@ -454,7 +454,7 @@ def build_docx(cv, path):
                 left = 4.5 if b.get("flat") else 9.5
                 p.paragraph_format.left_indent = Mm(left)
                 p.paragraph_format.first_line_indent = Mm(-4)
-                p.paragraph_format.space_before = p.paragraph_format.space_after = Pt(1)
+                p.paragraph_format.space_before = p.paragraph_format.space_after = Pt(0.6)
         elif t == "skills":
             for k, v in b["rows"]:
                 p = para()

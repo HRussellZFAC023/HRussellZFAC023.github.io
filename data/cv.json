@@ -53,7 +53,7 @@
      ],
      [
       "Front end",
-      "React, Next.js, Vue, Storybook, design systems, web components, Contentful, WCAG AA, Zod, state management (custom external stores with hooks, React Context, Redux, Pinia)"
+      "React, Next.js, Vue, Storybook, design systems, web components, micro-frontends, Contentful, WCAG AA, Zod, state management (custom external stores with hooks, React Context, Redux, Pinia)"
      ],
      [
       "Back end and cloud",
@@ -61,7 +61,7 @@
      ],
      [
       "Data and AI",
-      "SQL (Postgres, D1), vector search (Jina), in-browser Whisper (Transformers.js), AWS Bedrock"
+      "Postgres, D1, Jina vector search, in-browser Whisper (Transformers.js, WebGPU), AWS Bedrock"
      ],
      [
       "Testing and delivery",
@@ -73,7 +73,7 @@
      ],
      [
       "Product",
-      "user feedback, product decisions, content modelling with editors, agile facilitation, teaching"
+      "user feedback, product decisions, content modelling, agile facilitation, knowledge sharing, teaching"
      ]
     ]
    },
@@ -100,7 +100,7 @@
      "Built more than 20 bespoke components from Figma designs, to the bank's standards and WCAG AA: hero variants, carousels, price cards, grids, a mega nav, breadcrumbs and accessible animations.",
      "Added AI-based validation, and agent-ready analytics in Datadog RUM.",
      "Turned client call transcripts into requirements and tickets with AI.",
-     "Designed the Contentful content model with the content editors: one price type reused across the site, and a custom variant selector so one component covers many designs."
+     "Designed the Contentful content model with the editors (one price type reused site-wide, a variant selector so one component covers many designs), and shipped a static build when the licence came late."
     ]
    },
    {
@@ -111,8 +111,9 @@
    {
     "type": "bullets",
     "items": [
-     "Created the new \"Find a funeral home\" finder as its main engineer: address search, a Google Maps view and the API behind it, on desktop and mobile. The team built it in about three months during the code freeze after the 2025 Co-op cyber attack, as a standalone app so it could still ship.",
-     "Built Vue micro-frontends with Pinia for state, Contentful/Jinja templates and a shared component library with web component support, for customer journeys including Direct Cremation.",
+     "Created the \"Find a funeral home\" finder as main engineer (address search, Google Maps, API, desktop and mobile). The team shipped it as a standalone app in three months, through the code freeze after Co-op's 2025 cyber attack.",
+     "Built Vue micro-frontends, Contentful/Jinja templates and a shared component library with web component support, for customer journeys including Direct Cremation.",
+     "Used Pinia extensively to manage state across the Vue micro-frontends.",
      "Implemented A/B tests in Adobe Target, and contributed to Python/Django services, AWS and monitoring.",
      "Used coding agents to refactor and clean up technical debt, and set up automated checks for accessibility, Lighthouse scores and agent readiness, including an llms.txt.",
      "Facilitated agile ceremonies in a team that regularly won Co-op's internal awards for its ways of working."
@@ -141,7 +142,8 @@
     "type": "bullets",
     "items": [
      "Built mortgage fact-find journeys in React and TypeScript under strict technical constraints: no third-party libraries, a custom router, and forms that branch on the applicant's answers.",
-     "Built our own state layer: small stores outside React behind custom hooks, and React Context for app-wide values.",
+     "Built our own state management: many small stores kept outside React, each read through a custom hook so components only re-render on the data they use.",
+     "Kept fast-changing form state in those stores, and used React Context only for app-wide values.",
      "Wrote reusable hooks for debounced autosave and a shared validation pattern used across the forms.",
      "Added server-side validation in Java 8 on Liberty to match the front-end rules, pairing across the stack.",
      "Practised TDD and pairing with QA, and integrated with the bank's systems for documents and data."
@@ -155,7 +157,7 @@
    {
     "type": "bullets",
     "items": [
-     "After an AI workshop where management asked for a brand design skill, saw the real gap was sharing agent skills, and built a catalogue agents can search in one day, styled by its first skill."
+     "After an AI workshop where managers asked for a brand design skill, saw the real gap was sharing agent skills, and took a catalogue agents can search from idea to production in a day, styled by its first skill."
     ]
    },
    {
@@ -191,7 +193,8 @@
     "flat": true,
     "items": [
      "Developer, designer and product owner of an advanced learning system for Japanese, bringing all of a learner's study apps into one place and tracking their immersion.",
-     "Shipped as a website, a browser extension, phone and desktop apps, and a plugin for ChatGPT and Claude.",
+     "Shipped as a website, a browser extension, and phone and desktop apps.",
+     "Built an MCP server so ChatGPT and Claude can use Yomu as a plugin: study in the sidebar and cards in chat.",
      "Built an instant pop-up dictionary for web pages, manga, PDFs and video, one review queue shared with Anki, JPDB, WaniKani, Bunpro and Jiten.",
      "Utilised coding agents (Codex and Claude Code) extensively to build features, verify changes and iterate on ideas, backed by automated checks and a regression test for every fix.",
      "Works closely with Yomu's users, turning their feedback into fixes and new features."
@@ -238,7 +241,7 @@
     "type": "edu",
     "title": "BSc Computer Science (Software Engineering)",
     "meta": "Royal Holloway, University of London · 2018 – 2021 · First-Class Honours (avg 80%)",
-    "text": "Computer Science Prize for outstanding final-year project (2021). Best Second-Year Software Engineering Group Project (2020). Top academic performer (2019). Team project in React, Flask and Postgres."
+    "text": "Prizes for the best final-year project (2021), the best second-year group project (2020: an asset management system in React, Flask and Postgres) and top academic performance (2019)."
    },
    {
     "type": "para",

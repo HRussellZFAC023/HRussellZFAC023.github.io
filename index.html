@@ -45,7 +45,7 @@
       .sheet {
         width: 210mm;
         height: 297mm;
-        padding: 8mm 13mm 8mm;
+        padding: 7mm 13mm 7mm;
         margin: 0 auto 2rem;
         background: #fff;
         border-radius: 6px;
@@ -58,7 +58,7 @@
         background: var(--blue);
         color: #fff;
         text-align: center;
-        padding: 4mm 4mm 4.5mm;
+        padding: 3.5mm 4mm 3.5mm;
       }
       .contact {
         font-style: normal;
@@ -95,7 +95,7 @@
       .tech.flat { margin-left: 0; }
       ul { padding-left: 9.5mm; list-style-type: "•  "; }  /* a text bullet, so it survives PDF text extraction */
       ul.flat { padding-left: 4.5mm; }
-      li { margin: 0.35mm 0; }
+      li { margin: 0.15mm 0; }
       .skill { margin-bottom: 0.7mm; }
       .edu { margin-top: 1.6mm; }
 
@@ -163,12 +163,12 @@
         <p class="para">Software engineer at Zühlke since 2022, building web applications for banking, payments and retail clients. Experienced in TypeScript, React and Vue on the front end, with Python, Java and AWS on the back end. Native in agentic engineering, and developer and maintainer of Yomu, an advanced learning system for Japanese.</p>
         <h2>Skills</h2>
         <p class="skill"><strong>Languages:</strong> TypeScript, JavaScript, Python, Java, HTML, CSS, SQL</p>
-        <p class="skill"><strong>Front end:</strong> React, Next.js, Vue, Storybook, design systems, web components, Contentful, WCAG AA, Zod, state management (custom external stores with hooks, React Context, Redux, Pinia)</p>
+        <p class="skill"><strong>Front end:</strong> React, Next.js, Vue, Storybook, design systems, web components, micro-frontends, Contentful, WCAG AA, Zod, state management (custom external stores with hooks, React Context, Redux, Pinia)</p>
         <p class="skill"><strong>Back end and cloud:</strong> Django, Node.js, Hono, AWS, Cloudflare Workers, Docker</p>
-        <p class="skill"><strong>Data and AI:</strong> SQL (Postgres, D1), vector search (Jina), in-browser Whisper (Transformers.js), AWS Bedrock</p>
+        <p class="skill"><strong>Data and AI:</strong> Postgres, D1, Jina vector search, in-browser Whisper (Transformers.js, WebGPU), AWS Bedrock</p>
         <p class="skill"><strong>Testing and delivery:</strong> TDD, React Testing Library, Playwright, Lighthouse, Datadog RUM, GitHub Actions</p>
         <p class="skill"><strong>Agentic engineering:</strong> Codex, Claude Code, MCP, agent skills, AGENTS.md rules, llms.txt, CI regression gates</p>
-        <p class="skill"><strong>Product:</strong> user feedback, product decisions, content modelling with editors, agile facilitation, teaching</p>
+        <p class="skill"><strong>Product:</strong> user feedback, product decisions, content modelling, agile facilitation, knowledge sharing, teaching</p>
         <h2>Experience</h2>
         <h3 class="role"><span>Advanced Software Engineer</span><span class="dates">Jan 2024 – Present</span></h3>
         <p class="org">Zühlke Engineering, London · Professional Software Engineer, Sep 2022 – Jan 2024</p>
@@ -180,13 +180,14 @@
           <li>Built more than 20 bespoke components from Figma designs, to the bank's standards and WCAG AA: hero variants, carousels, price cards, grids, a mega nav, breadcrumbs and accessible animations.</li>
           <li>Added AI-based validation, and agent-ready analytics in Datadog RUM.</li>
           <li>Turned client call transcripts into requirements and tickets with AI.</li>
-          <li>Designed the Contentful content model with the content editors: one price type reused across the site, and a custom variant selector so one component covers many designs.</li>
+          <li>Designed the Contentful content model with the editors (one price type reused site-wide, a variant selector so one component covers many designs), and shipped a static build when the licence came late.</li>
         </ul>
         <h4 class="project">Co-op Funeralcare · digital products team · <a href="https://coop.co.uk/funeralcare">coop.co.uk/funeralcare</a></h4>
         <p class="tech">Vue, Pinia, Python, Django, AWS, Contentful, Adobe Target</p>
         <ul>
-          <li>Created the new "Find a funeral home" finder as its main engineer: address search, a Google Maps view and the API behind it, on desktop and mobile. The team built it in about three months during the code freeze after the 2025 Co-op cyber attack, as a standalone app so it could still ship.</li>
-          <li>Built Vue micro-frontends with Pinia for state, Contentful/Jinja templates and a shared component library with web component support, for customer journeys including Direct Cremation.</li>
+          <li>Created the "Find a funeral home" finder as main engineer (address search, Google Maps, API, desktop and mobile). The team shipped it as a standalone app in three months, through the code freeze after Co-op's 2025 cyber attack.</li>
+          <li>Built Vue micro-frontends, Contentful/Jinja templates and a shared component library with web component support, for customer journeys including Direct Cremation.</li>
+          <li>Used Pinia extensively to manage state across the Vue micro-frontends.</li>
           <li>Implemented A/B tests in Adobe Target, and contributed to Python/Django services, AWS and monitoring.</li>
           <li>Used coding agents to refactor and clean up technical debt, and set up automated checks for accessibility, Lighthouse scores and agent readiness, including an llms.txt.</li>
           <li>Facilitated agile ceremonies in a team that regularly won Co-op's internal awards for its ways of working.</li>
@@ -203,7 +204,8 @@
         <p class="tech">React, TypeScript, React Testing Library, Java, TDD, SAFe</p>
         <ul>
           <li>Built mortgage fact-find journeys in React and TypeScript under strict technical constraints: no third-party libraries, a custom router, and forms that branch on the applicant's answers.</li>
-          <li>Built our own state layer: small stores outside React behind custom hooks, and React Context for app-wide values.</li>
+          <li>Built our own state management: many small stores kept outside React, each read through a custom hook so components only re-render on the data they use.</li>
+          <li>Kept fast-changing form state in those stores, and used React Context only for app-wide values.</li>
           <li>Wrote reusable hooks for debounced autosave and a shared validation pattern used across the forms.</li>
           <li>Added server-side validation in Java 8 on Liberty to match the front-end rules, pairing across the stack.</li>
           <li>Practised TDD and pairing with QA, and integrated with the bank's systems for documents and data.</li>
@@ -211,7 +213,7 @@
         <h4 class="project">Zühlke Skill Hub · internal tool · <a href="https://zuehlke-skill-hub.pages.dev">zuehlke-skill-hub.pages.dev</a></h4>
         <p class="tech">Cloudflare, Microsoft Entra sign-in, coding agents</p>
         <ul>
-          <li>After an AI workshop where management asked for a brand design skill, saw the real gap was sharing agent skills, and built a catalogue agents can search in one day, styled by its first skill.</li>
+          <li>After an AI workshop where managers asked for a brand design skill, saw the real gap was sharing agent skills, and took a catalogue agents can search from idea to production in a day, styled by its first skill.</li>
         </ul>
         <h3 class="role"><span>Computer Science Teacher (part-time)</span><span class="dates">2022 – 2024</span></h3>
         <p class="org">Academic Tutors Surrey · one-to-one A-level Computer Science tuition</p>
@@ -224,7 +226,8 @@
         <p class="tech flat">TypeScript, React, Hono, Cloudflare Workers and D1, Capacitor, MCP, Playwright · May 2026 – Present</p>
         <ul class="flat">
           <li>Developer, designer and product owner of an advanced learning system for Japanese, bringing all of a learner's study apps into one place and tracking their immersion.</li>
-          <li>Shipped as a website, a browser extension, phone and desktop apps, and a plugin for ChatGPT and Claude.</li>
+          <li>Shipped as a website, a browser extension, and phone and desktop apps.</li>
+          <li>Built an MCP server so ChatGPT and Claude can use Yomu as a plugin: study in the sidebar and cards in chat.</li>
           <li>Built an instant pop-up dictionary for web pages, manga, PDFs and video, one review queue shared with Anki, JPDB, WaniKani, Bunpro and Jiten.</li>
           <li>Utilised coding agents (Codex and Claude Code) extensively to build features, verify changes and iterate on ideas, backed by automated checks and a regression test for every fix.</li>
           <li>Works closely with Yomu's users, turning their feedback into fixes and new features.</li>
@@ -246,7 +249,7 @@
         <p>Research collaboration with Intel and Microsoft: developed a Visual Studio plugin for gesture-based, touchless interaction with the IDE, for developers with motor impairments.</p>
         <h3 class="edu">BSc Computer Science (Software Engineering)</h3>
         <p class="meta">Royal Holloway, University of London · 2018 – 2021 · First-Class Honours (avg 80%)</p>
-        <p>Computer Science Prize for outstanding final-year project (2021). Best Second-Year Software Engineering Group Project (2020). Top academic performer (2019). Team project in React, Flask and Postgres.</p>
+        <p>Prizes for the best final-year project (2021), the best second-year group project (2020: an asset management system in React, Flask and Postgres) and top academic performance (2019).</p>
         <p class="para"><strong>Certification:</strong> AWS Certified Solutions Architect – Associate (2024).</p>
         <p class="para"><strong>Interests:</strong> Japanese language study, chess and strategy games, psychology, photography.</p>
       </section>
